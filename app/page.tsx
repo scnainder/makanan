@@ -72,11 +72,69 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Tentang OUR Section */}
+      <section className="py-20 bg-amber-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">Tentang OUR</h2>
+          <div className="max-w-4xl mx-auto bg-white p-10 rounded-lg shadow-lg border-l-4 border-orange-600 mb-12">
+            <h3 className="text-2xl font-bold text-orange-600 mb-4">Arti OUR (Onodera User Run)</h3>
+            <p className="text-lg text-gray-800 mb-6 leading-relaxed">
+              <span className="font-bold text-orange-600">OUR = Kami, Keluarga</span> - Merepresentasikan sikap kami dalam menjalankan bisnis dengan perasaan yang sama seperti keluarga terhadap peserta program, perusahaan penerima, dan fasilitas penerima di Jepang.
+            </p>
+            <p className="text-lg text-gray-800 leading-relaxed">
+              Kami membina SDM asing berbakat dari seluruh dunia dan mendukung mereka untuk berperan aktif di Jepang, di berbagai bidang kerja — termasuk <span className="font-bold">Layanan Makanan</span>. <span className="font-bold">Impian kami adalah berkontribusi demi kebahagiaan semua orang.</span>
+            </p>
+          </div>
+
+          {/* 5 Konsep SDM */}
+          <h3 className="text-2xl font-bold text-center mb-8">5 Konsep SDM yang Kami Harapkan</h3>
+          <div className="max-w-5xl mx-auto grid md:grid-cols-5 gap-4">
+            {[
+              { num: '❶', text: 'Tidak berhenti bekerja 5 tahun' },
+              { num: '❷', text: 'Serius dalam pekerjaan' },
+              { num: '❸', text: 'Mampu berbahasa Jepang' },
+              { num: '❹', text: 'Pendidikan profesional' },
+              { num: '❺', text: 'Berambisi & mimpi besar' }
+            ].map((item, i) => (
+              <div key={i} className="bg-red-50 p-6 rounded-lg border-t-4 border-red-600 text-center">
+                <div className="text-4xl font-bold mb-2">{item.num}</div>
+                <p className="text-gray-800 font-semibold text-sm">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Yang GRATIS dari OUR */}
+      <section className="py-20 bg-green-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">🎉 Yang GRATIS dari OUR</h2>
+          <div className="max-w-5xl mx-auto grid md:grid-cols-4 gap-6">
+            {[
+              { icon: '🎓', title: 'Pelatihan Bahasa', desc: 'Gratis' },
+              { icon: '🍳', title: 'Pelatihan Layanan Makanan', desc: 'Gratis 100%' },
+              { icon: '🏠', title: 'Asrama', desc: 'Gratis (perempuan)' },
+              { icon: '✈️', title: 'Tiket Pesawat', desc: 'Gratis ke Jepang' },
+              { icon: '📋', title: 'Visa', desc: 'Tokutei Ginou gratis' },
+              { icon: '🤝', title: 'Wawancara', desc: 'Persiapan gratis' },
+              { icon: '📚', title: 'Pra-Berangkat', desc: 'Program gratis' },
+              { icon: '👨‍💼', title: 'Dukungan 5 Tahun', desc: 'Gratis berkelanjutan' }
+            ].map((benefit, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-green-600 text-center">
+                <div className="text-4xl mb-3">{benefit.icon}</div>
+                <h3 className="font-bold text-gray-800 mb-2">{benefit.title}</h3>
+                <p className="text-sm text-gray-600">{benefit.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Job nature intro */}
       <section className="py-16 bg-orange-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-orange-700">Tentang Bidang Ini</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-orange-700">Tentang Bidang Layanan Makanan</h2>
             <p className="text-gray-800 text-lg leading-relaxed">
               Layanan Makanan adalah posisi kerja di industri restoran/dapur Jepang dengan tugas dan lingkungan
               kerja tertentu yang bersifat wajib bagi seluruh pekerja di posisi ini, tanpa terkecuali. Silakan
